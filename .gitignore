@@ -1,3 +1,4 @@
 air/
 logs/
 aiflow.db
+__pycache__
