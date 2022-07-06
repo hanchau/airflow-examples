@@ -1,0 +1,11 @@
+1. Starting ariflow webserver --> 
+    airflow webserver -p 8025 --stderr logs/airflow-webserver.err --stdout logs/airflow-webserver.out -l logs/airflow-webserver.log --pid logs/aiflow-webserver.pid -D
+2. Initializing the db -->
+    airflow db init
+3. Killing the webserver -->
+    pkill -f airflow-webserver
+4. Before starting the webserver --> Ensure the monitor pid is not locked
+    rm logs/airflow-webserver-monitor.pid
+    <Command# 1>
+5. Starting the Scheduler
+    airflow scheduler > /home/hanchau/airflow/logs/scheduler.logs &
